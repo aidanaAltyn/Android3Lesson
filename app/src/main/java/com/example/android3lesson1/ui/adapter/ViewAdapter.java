@@ -1,7 +1,5 @@
 package com.example.android3lesson1.ui.adapter;
 
-import android.annotation.SuppressLint;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android3lesson1.R;
+import com.example.android3lesson1.ui.model.Books;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.example.android3lesson1.ui.model.Books;
 
 public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolder> {
 
@@ -58,5 +55,6 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolder> {
             title.setText(books.getTitle());
             imageView.setImageResource(books.getImage());
         }
+
     }
 }

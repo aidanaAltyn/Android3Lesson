@@ -1,4 +1,4 @@
-package com.example.android3lesson1.ui.fragment;
+package com.example.android3lesson1.ui.model;
 
 import android.util.Log;
 
@@ -18,7 +18,6 @@ public class MainViewModel extends ViewModel {
    public  MutableLiveData<List<Books>> book = new MutableLiveData<>();
     public void getBooks() {
        book.setValue(bookClient.getData());
-
     }
 }
 

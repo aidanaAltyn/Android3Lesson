@@ -1,10 +1,11 @@
-package com.example.android3lesson1;
+package com.example.android3lesson1.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 
+import com.example.android3lesson1.R;
 import com.example.android3lesson1.ui.fragment.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +19,5 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction().add(R.id.nav_host_fragment, HomeFragment.class,null).commit();
         }
-
     }
 }
