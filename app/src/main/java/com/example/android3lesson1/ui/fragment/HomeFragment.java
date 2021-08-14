@@ -45,7 +45,6 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         setupRecycler();
-        setupClickButton();
         setupObserve();
         download();
 
@@ -55,7 +54,7 @@ public class HomeFragment extends Fragment {
         binding.btnDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                setupClickButton();
             }
         });
     }

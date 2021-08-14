@@ -1,6 +1,7 @@
 package com.example.android3lesson1.ui.adapter;
 
 import android.annotation.SuppressLint;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,13 +20,11 @@ import com.example.android3lesson1.ui.model.Books;
 
 public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolder> {
 
-    private List<Books> list;
+    private List<Books> list = new ArrayList<>();
 
-    @SuppressLint("NotifyDataSetChanged")
     public void getList(List<Books> addList){
         list = addList;
         notifyDataSetChanged();
-
     }
 
     @Override
