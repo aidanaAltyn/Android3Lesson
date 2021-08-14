@@ -43,7 +43,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void download() {
-        binding.btnDownload.setOnClickListener(new View.OlitynClickListener() {
+        binding.btnDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setupClickButton();
