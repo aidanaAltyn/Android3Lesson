@@ -7,7 +7,7 @@
 
     <ImageView
     android:layout_margin="12dp"
-    android:id="@+id/item_image"
+    android:id="@+id/image"
     android:src="@drawable/elep"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintTop_toTopOf="parent"
@@ -19,18 +19,18 @@
         android:layout_margin="20sp"
         android:textColor="@color/black"
         android:textSize="23dp"
-        android:id="@+id/item_txt"
+        android:id="@+id/item"
         android:text="Title"
-        app:layout_constraintTop_toTopOf="@+id/item_image"
-        app:layout_constraintLeft_toRightOf="@+id/item_image"
+        app:layout_constraintTop_toTopOf="@+id/image"
+        app:layout_constraintLeft_toRightOf="@+id/image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:textSize="15dp"
         android:id="@+id/des"
-        app:layout_constraintTop_toBottomOf="@id/item_txt"
-        app:layout_constraintLeft_toLeftOf="@id/item_txt"
+        app:layout_constraintTop_toBottomOf="@id/item"
+        app:layout_constraintLeft_toLeftOf="@id/item"
         android:text="Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

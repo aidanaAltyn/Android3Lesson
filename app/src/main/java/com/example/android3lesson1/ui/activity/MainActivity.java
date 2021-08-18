@@ -1,23 +1,27 @@
 package com.example.android3lesson1.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
+
 import com.example.android3lesson1.R;
-import com.example.android3lesson1.ui.fragment.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
-    private FragmentManager fragmentManager;
+
+    NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fragmentManager = getSupportFragmentManager();
-        if (savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().add(R.id.nav_host_fragment, HomeFragment.class,null).commit();
-        }
+        setupNavigation();
+    }
+
+    private void setupNavigation() {
+        NavHostFragment navHostFragment =
+                (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        navController = navHostFragment.getNavController();
     }
 }

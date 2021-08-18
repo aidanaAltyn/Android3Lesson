@@ -11,16 +11,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android3lesson1.R;
 import com.example.android3lesson1.ui.model.Books;
+import com.example.android3lesson1.ui.model.OnClickListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolder> {
 
-    private List<Books> list = new ArrayList<>();
+     ArrayList<Books> list = new ArrayList<>();
+     OnClickListener onClickListener;
 
-    public void getList(List<Books> addList){
-        list = addList;
+    public void setOnClickListener(OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
+    }
+
+    public void getList(ArrayList<Books> addList){
+        this.list = addList;
         notifyDataSetChanged();
     }
 
@@ -42,6 +47,7 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolder> {
     }
 
 
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView title;
         ImageView imageView;
@@ -54,7 +60,9 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolder> {
         public void bind(Books books) {
             title.setText(books.getTitle());
             imageView.setImageResource(books.getImage());
+            itemView.setOnClickListener(v -> {
+                onClickListener.onItemClick(getAdapterPosition(),books, v);
+            });
         }
-
     }
 }
