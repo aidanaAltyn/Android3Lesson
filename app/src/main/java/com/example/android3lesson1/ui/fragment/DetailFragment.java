@@ -42,7 +42,7 @@ public class DetailFragment extends Fragment {
     }
 
     private void getDesc() {
-        viewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
+        viewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
     }
 

@@ -50,7 +50,6 @@ public class HomeFragment extends Fragment {
         setDataOnClick();
     }
 
-
     private void download() {
         binding.btnDownload.setOnClickListener(v -> {
             binding.btnDownload.setVisibility(View.GONE);
@@ -83,7 +82,6 @@ public class HomeFragment extends Fragment {
                         adapter.getList(books);
                 }
             });
-
     }
 
     private void setDataOnClick() {
